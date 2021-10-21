@@ -1,0 +1,61 @@
+package com.anhtien.tinfbefurnituremanagement.servlet;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.anhtien.tinfbefurnituremanagement.entity.Item;
+import com.anhtien.tinfbefurnituremanagement.service.OrderService;
+
+@WebServlet("/checkout")
+public class CheckoutServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	public CheckoutServlet() {
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/checkout.jsp");
+		dispatcher.forward(request, response);
+	}
+
+	@SuppressWarnings("unchecked")
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		HttpSession session = request.getSession();
+		List<Item> cart = (List<Item>) session.getAttribute("cart");
+		try {
+			Timestamp orderDate = new Timestamp(new Date().getTime());
+			String username = request.getParameter("username");
+			String address = request.getParameter("address");
+			String phone = request.getParameter("phone");
+			String orderID = "" + orderDate.getTime();
+			int total = 0;
+			for(Item item : cart) {
+				total += item.getQuantity() * item.getProduct().getPrice();
+				OrderService orderService = new OrderService();
+				orderService.insertOrder("ORDER".concat(orderID), username, address, phone, total, orderDate);
+				}
+			} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		session.setAttribute("cart", cart);
+		response.sendRedirect(request.getContextPath() + "/home");
+		session.setAttribute("cartNum", 0);
+		session.removeAttribute("cart");
+	}
+
+}
