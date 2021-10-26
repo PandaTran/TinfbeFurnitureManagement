@@ -190,15 +190,31 @@
 				</div>
 				<div class="col-xl-5 col-lg-5 col-md-4 col-sm-3 col-3 px-0 text-right">
 					<div class="header__navbar-list header__navbar-service">
-						<label for="login-register__area" class="header__navbar-service--item header__navbar-item header__login md-display-none sm-display-none xs-display-none">
-							<a href="login"> 
-								<i class="header__navbar-service--icon ri-user-3-line" title="Login"></i> 
-								<span class="login-register"> <c:out value="${sessionScope.username }"/> </span>
-							</a>
-						</label> 
-						<label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none">
-							<i class="header__navbar-service--icon ri-search-line" title="Search"></i>
-						</label> 
+						<label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none" for="header__search-target">
+                            <i class="header__navbar-service--icon ri-search-line" title="Search"></i>
+                            
+                        </label>
+                        <input type="checkbox" class="header__search-input" id="header__search-target" hidden>
+                        <label for="header__search-target" class="overlay"></label>
+                        <div class="header-search-details">
+                            <label class="mobile-menu__close" for="header__search-target">
+                                <i class="ri-close-line" style="font-size: 20px;"></i>
+                            </label>
+                            <div class="header-search-content text-center">
+                                <h3 class="">Search in:</h3>
+                                <ul class="d-md-flex justify-content-between mt-5 md-display-none sm-display-none xs-display-none">
+                                    <li><a class="active" href="">All categories</a></li>
+                                    <li><a href="">Chair &amp; Tables</a></li>
+                                    <li><a href="">Floor</a></li>
+                                    <li><a href="">Home Accessories</a></li>
+                                    <li><a href="">Ceiling lights</a></li>
+                                </ul>  
+                                <form action="#" class="position-relative pt-5">
+                                    <input class="form-control" type="text" placeholder="Search Products...">
+                                    <a class="position-absolute" href="#"><span class="icon-search"></span></a>
+                                </form>
+                            </div>
+                        </div> 
 						<label class="header__navbar-service--item header__navbar-item header__heart md-display-none sm-display-none xs-display-none">
                             <button class="bg-transparent p-0" id="wishlist" data-target="#wishlist">
                                 <a href="wishlist">
@@ -216,6 +232,20 @@
                                 </a>
                             </button>
                         </label>
+						<label for="login-register__area" class="header__navbar-service--item header__navbar-item header__login md-display-none sm-display-none xs-display-none">
+							<c:if test="${sessionScope.username == null }">
+								<a href="login"> 
+									<i class="header__navbar-service--icon ri-user-3-line" title="Login"></i> 
+								</a>
+								<a href="login"><span>Login/Register</span></a>
+							</c:if>
+							<c:if test="${sessionScope.username != null}">
+								<a href="logout">
+									<i class="header__navbar-service--icon ri-logout-circle-r-line" title="Logout"></i>
+								</a>
+								<span class="ml-1">${sessionScope.name }</span>
+							</c:if>
+						</label>
 						<label class="header__navbar-service--item header__navbar-item md-display-none sm-display-none xs-display-none">
 							<img src="./assets/images/moon.png" alt="" id="dark-mode__icon" class="w-75">
 						</label>

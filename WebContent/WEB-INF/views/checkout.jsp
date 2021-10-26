@@ -61,8 +61,8 @@
 								<tbody>
 									<c:forEach var="item" items="${sessionScope.cart }">
 										<c:set var="total" value="${total + item.product.price * item.quantity }"></c:set>
-				                   		<c:set var="vat" value="${total * 0.1 }"></c:set>
-				                   		<c:set var="discount" value="${item.product.price * ((item.product.discount)/100) }"></c:set>
+										<c:set var="vat" value="${total * 0.1 }"></c:set>
+	                   					<c:set var="discount" value="${item.product.price * ((item.product.discount)/100) }"></c:set>
 				                   		<c:set var="setDiscount" value="${item.product.discount }"></c:set>
 				                   		<c:set var="pay" value="${total + vat - discount }"></c:set>
 										<tr class="cart_item">

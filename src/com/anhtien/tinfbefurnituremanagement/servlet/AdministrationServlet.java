@@ -13,9 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.anhtien.tinfbefurnituremanagement.dao.CategoryDAO;
 import com.anhtien.tinfbefurnituremanagement.entity.Category;
-import com.anhtien.tinfbefurnituremanagement.entity.Order;
 import com.anhtien.tinfbefurnituremanagement.entity.Product;
-import com.anhtien.tinfbefurnituremanagement.service.OrderService;
 import com.anhtien.tinfbefurnituremanagement.service.ProductService;
 
 @WebServlet("/administration")
@@ -47,10 +45,10 @@ public class AdministrationServlet extends HttpServlet {
 			throws ServletException, IOException, SQLException {
 			ArrayList<Product> products = new ProductService().showAllProduct();
 			ArrayList<Category> categories = new CategoryDAO().showAllCategory();
-			ArrayList<Order> orders = new OrderService().showAllOrder();
+//			ArrayList<Order> orders = new OrderService().showAllOrder();
 			request.setAttribute("product", products);
 			request.setAttribute("category", categories);
-			request.setAttribute("order", orders);
+//			request.setAttribute("order", orders);
 		request.getRequestDispatcher("/WEB-INF/views/administration__layout/administration.jsp").forward(request, response);
 	}
 

@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 import com.anhtien.tinfbefurnituremanagement.entity.Item;
 import com.anhtien.tinfbefurnituremanagement.entity.Order;
 import com.anhtien.tinfbefurnituremanagement.entity.Product;
+import com.anhtien.tinfbefurnituremanagement.entity.User;
 import com.anhtien.tinfbefurnituremanagement.service.OrderDetailService;
 import com.anhtien.tinfbefurnituremanagement.service.OrderService;
 import com.anhtien.tinfbefurnituremanagement.service.UserService;
@@ -26,6 +27,7 @@ public class CheckoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	OrderService orderService = new OrderService();
 	OrderDetailService orderDetailService = new OrderDetailService();
+	User user = new User();
 	public CheckoutServlet() {
 	}
 
@@ -49,22 +51,25 @@ public class CheckoutServlet extends HttpServlet {
 			String payment = request.getParameter("payment");
 			String orderID = "" + orderDate.getTime();
 			int total = 0;
+			int pay = 0;
+			int vat = 0;
 			UserService service = new UserService();
 			service.findByUsernameAndPassword(request.getParameter("username"), 
 					request.getParameter("password"));
 			if(service == null) {
 				request.setAttribute("errorMessage", "Account's invalid");
 				request.getRequestDispatcher("/WEB-INF/views/checkout.jsp").forward(request, response);
-				
 			} else {
 			for(Item item : cart) {
 				total += item.getQuantity() * item.getProduct().getPrice();
-				Order order = new Order("ORDER".concat(orderID), username, address, phone, total, orderDate, payment, null);
-				orderService.insertOrder("ORDER".concat(orderID), username, address, phone, total, orderDate, payment, null);
+				vat = (int) (total * 0.1);
+				pay = total + vat; 
+				Order order = new Order("ORDER".concat(orderID), username, address, phone, pay, orderDate, payment, user);
+				orderService.insertOrder("ORDER".concat(orderID), username, address, phone, pay, orderDate, payment, user);
 				orderDetailService.insertOrderDetail(new Order(order.getId()), 
 						new Product(item.getProduct().getId()), 
 						item.getQuantity(), item.getProduct().getPrice());
-				}
+			}
 			}
 			}catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -144,7 +144,7 @@ public class CartServlet extends HttpServlet {
 		@SuppressWarnings("unchecked")
 		List<Item> cart = (List<Item>) session.getAttribute("cart");
 		cart.removeAll(cart);
-		session.setAttribute("cart", cart);
+		session.removeAttribute("cart");
 		session.setAttribute("cartNum", cart.size());
 		response.sendRedirect("cart");
 	}

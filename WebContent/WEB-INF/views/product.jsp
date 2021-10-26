@@ -197,12 +197,6 @@
 				</div>
 				<div class="col-xl-5 col-lg-5 col-md-4 col-sm-3 col-3 px-0 text-right">
 					<div class="header__navbar-list header__navbar-service">
-						<label for="login-register__area" class="header__navbar-service--item header__navbar-item header__login md-display-none sm-display-none xs-display-none">
-							<a href="login"> 
-								<i class="header__navbar-service--icon ri-user-3-line" title="Login"></i> 
-								<span class="login-register"> <c:out value="${sessionScope.username }"/> </span>
-							</a>
-						</label> 
 						<label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none" for="header__search-target">
                             <i class="header__navbar-service--icon ri-search-line" title="Search"></i>
                         </label>
@@ -244,6 +238,20 @@
                                 </a>
                             </button>
                         </label>
+						<label for="login-register__area" class="header__navbar-service--item header__navbar-item header__login md-display-none sm-display-none xs-display-none">
+							<c:if test="${sessionScope.username == null }">
+								<a href="login"> 
+									<i class="header__navbar-service--icon ri-user-3-line" title="Login"></i> 
+								</a>
+								<a href="login"><span>Login/Register</span></a>
+							</c:if>
+							<c:if test="${sessionScope.username != null}">
+								<a href="logout">
+									<i class="header__navbar-service--icon ri-logout-circle-r-line" title="Logout"></i>
+								</a>
+								<span class="ml-1">${sessionScope.name }</span>
+							</c:if>
+						</label>
 						<label class="header__navbar-service--item header__navbar-item md-display-none sm-display-none xs-display-none">
 							<img src="./assets/images/moon.png" alt="" id="dark-mode__icon" class="w-75">
 						</label>
