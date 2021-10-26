@@ -15,6 +15,10 @@ public class Product {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Product(int id) {
+		this.id = id;
+	}
+
 	public Product(int id, String name, String description, int quantity, Double price, int discount, String image,
 			Category category) {
 		super();

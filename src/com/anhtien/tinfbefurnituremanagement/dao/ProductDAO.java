@@ -119,8 +119,7 @@ public class ProductDAO {
 		product.setPrice(resultSet.getDouble("price"));
 		product.setDiscount(resultSet.getInt("discount"));
 		product.setImage(resultSet.getString("image"));
-		Category category = new Category(resultSet.getInt("id"));
-		product.setCategory(category);
+		product.setCategory(new Category(resultSet.getInt("category_id")));
 		return product;
 	}
 }

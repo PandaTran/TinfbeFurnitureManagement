@@ -4,7 +4,7 @@
 <%@page import="com.anhtien.tinfbefurnituremanagement.service.ProductService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -187,77 +187,37 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Customer</th>
-                                        <th>Date</th>
-                                        <th>Shipped Date</th>
+                                        <th>Order Date</th>
+                                        <th>Address</th>
                                         <th>Order Status</th>
-                                        <th>Payment status</th>
+                                        <th>Payment Method</th>
                                         <th>Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>#123</td>
-                                        <td>
-                                            <div class="order-owner">
-                                                <img src=".//assets/images/product__chair1.png" alt="">
-                                                <span>Dining decor</span>
-                                            </div>
-                                        </td>
-                                        <td>2021-09-04</td>
-                                        <td></td>
-                                        <td>
-                                            <span class="order-status order-ready">Ready</span>
-                                        </td>
-                                        <td>
-                                            <div class="payment-status payment-pending">
-                                                <div class="dot"></div>
-                                                <span>Pending</span>
-                                            </div>
-                                        </td>
-                                        <td>$123.556</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#123</td>
-                                        <td>
-                                            <div class="order-owner">
-                                                <img src=".//assets/images/product__chair1.png" alt="">
-                                                <span>Dining decor</span>
-                                            </div>
-                                        </td>
-                                        <td>2021-09-04</td>
-                                        <td></td>
-                                        <td>
-                                            <span class="order-status order-ready">Ready</span>
-                                        </td>
-                                        <td>
-                                            <div class="payment-status payment-pending">
-                                                <div class="dot"></div>
-                                                <span>Pending</span>
-                                            </div>
-                                        </td>
-                                        <td>$123.556</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#123</td>
-                                        <td>
-                                            <div class="order-owner">
-                                                <img src=".//assets/images/product__chair1.png" alt="">
-                                                <span>Dining decor</span>
-                                            </div>
-                                        </td>
-                                        <td>2021-09-04</td>
-                                        <td></td>
-                                        <td>
-                                            <span class="order-status order-shipped">Shipped</span>
-                                        </td>
-                                        <td>
-                                            <div class="payment-status payment-paid">
-                                                <div class="dot"></div>
-                                                <span>Paid</span>
-                                            </div>
-                                        </td>
-                                        <td>$123.556</td>
-                                    </tr>
+                                	<c:forEach items="${order}" var="order">
+	                                    <tr>
+	                                        <td>${order.id }</td>
+	                                        <td>
+	                                            <div class="order-owner">
+	                                                <img src=".//assets/images/product__chair1.png" alt="">
+	                                                <span>${order.username }</span>
+	                                            </div>
+	                                        </td>
+	                                        <td>${order.orderDate }</td>
+	                                        <td>${order.address }</td>
+	                                        <td>
+	                                            <span class="order-status order-ready">${order.status }</span>
+	                                        </td>
+	                                        <td>
+	                                            <div class="payment-status payment-pending">
+	                                                <div class="dot"></div>
+	                                                <span>${order.payment }</span>
+	                                            </div>
+	                                        </td>
+	                                        <td>${order.total }</td>
+	                                    </tr>
+                                    </c:forEach>
                                 </tbody>
                             </table>
                         </div>
@@ -303,7 +263,7 @@
 										<td>${product.quantity }</td>
 										<td>${product.price }</td>
 										<td>${product.discount }%</td>
-										<td>${product.category.name }</td>
+										<td>${product.category.id }</td>
 										<td class="product__action">
 											<span><a href="administration?action=deleteProduct&id=${product.id }">Delete</a></span>
 											<span><a href="updateProduct?id=${product.id }">Update</a></span>

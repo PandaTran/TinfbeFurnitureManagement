@@ -63,7 +63,10 @@
                     	<c:forEach var="item" items="${sessionScope.cart }">
 	                   		<c:set var="total" value="${total + item.product.price * item.quantity }"></c:set>
 	                   		<c:set var="vat" value="${total * 0.1 }"></c:set>
-	                   		<c:set var="pay" value="${total + total * 0.1 }"></c:set>
+	                   		<c:set var="discount" value="${item.product.price * ((item.product.discount)/100) }"></c:set>
+	                   		<c:set var="setDiscount" value="${item.product.discount }"></c:set>
+	                   		<c:set var="pay" value="${total + vat - discount }"></c:set>
+	                   		
 	                   		<fmt:setLocale value="vi_VN" />
 							<tr>
 								<td><a href="productDetail?productID=${item.product.id }" class="cart-img d-block"> <img
@@ -123,6 +126,11 @@
                             <li class="d-flex justify-content-between align-items-center p-4">
                                 <span>VAT (10%)</span><span class="font-weight-bolder">
                                 	<fmt:formatNumber value="${vat }" type="currency"></fmt:formatNumber>
+                                </span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center p-4">
+                                <span>Discount (${setDiscount }%)</span><span class="font-weight-bolder">
+                                	<fmt:formatNumber value="${discount }" type="currency"></fmt:formatNumber>
                                 </span>
                             </li>
                             <li class="d-flex justify-content-between align-items-center p-4">

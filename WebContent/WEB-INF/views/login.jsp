@@ -52,11 +52,11 @@
                     <h1 class="login__title">Create Account</h1>
                     <div class="login__box">
                         <i class="ri-user-line login__icon"></i>
-                        <input type="text" placeholder="Username" class="login__input" name="username" required="required">
+                        <input type="text" placeholder="Username" class="login__input" name="fullname">
                     </div>
                     <div class="login__box">
                         <i class="ri-at-line login__icon"></i>
-                        <input type="text" placeholder="Email" class="login__input" name="email" required="required">
+                        <input type="text" placeholder="Email" class="login__input" name="username" required="required">
                     </div>
                     <div class="login__box">
                         <i class="ri-lock-2-line login__icon"></i>

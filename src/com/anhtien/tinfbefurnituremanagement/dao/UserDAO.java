@@ -11,19 +11,15 @@ import com.anhtien.tinfbefurnituremanagement.utils.DatabaseConnectionUtil;
 public class UserDAO {
 
 	public void insertUser(User user) throws SQLException {
-		String sql = "INSERT INTO user(`username`,`password`,`first_name`,`last_name`,`email`,`address`,`phone`,`role`) "
-				+ "VALUE (?,?,?,?,?,?,?,?);";
+		String sql = "INSERT INTO user(`username`,`password`,`role`,`fullname`) "
+				+ "VALUE (?,?,?,?);";
 		
 		Connection connection = DatabaseConnectionUtil.getConnection();
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 		preparedStatement.setString(1, user.getUsername());
 		preparedStatement.setString(2, user.getPassword());
-		preparedStatement.setString(3, user.getFirstName());
-		preparedStatement.setString(4, user.getLastName());
-		preparedStatement.setString(5, user.getEmail());
-		preparedStatement.setString(6, user.getAddress());
-		preparedStatement.setString(7, user.getPhone());
-		preparedStatement.setString(8, user.getRole());
+		preparedStatement.setString(3, user.getRole());
+		preparedStatement.setString(4, user.getFullname());
 		preparedStatement.executeUpdate();
 	}
 	
@@ -72,12 +68,8 @@ public class UserDAO {
 		user.setId(resultSet.getInt("id"));
 		user.setUsername(resultSet.getString("username"));
 		user.setPassword(resultSet.getString("password"));
-		user.setFirstName(resultSet.getString("firstName"));
-		user.setLastName(resultSet.getString("lastName"));
-		user.setEmail(resultSet.getString("email"));
-		user.setAddress(resultSet.getString("address"));
-		user.setPhone(resultSet.getString("phone"));
 		user.setRole(resultSet.getString("role"));
+		user.setFullname(resultSet.getString("fullname"));
 		return user;
 	}
 }

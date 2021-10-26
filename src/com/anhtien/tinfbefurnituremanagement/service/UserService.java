@@ -11,11 +11,7 @@ public class UserService {
 	
 	public boolean insertUser(String username,
 			String password,
-			String firstName,
-			String lastName,
-			String email,
-			String address,
-			String phone) throws SQLException {
+			String fullname) throws SQLException {
 		UserDAO userDAO = new UserDAO();
 		boolean isAccountExist = userDAO.isUsernameExists(username);
 		if(isAccountExist) {
@@ -24,13 +20,8 @@ public class UserService {
 		User user = new User();
 		user.setUsername(username);
 		user.setPassword(password);
-		user.setFirstName(firstName);
-		user.setLastName(lastName);
-		user.setEmail(email);
-		user.setAddress(address);
-		user.setPhone(phone);
 		user.setRole("USER");
-		
+		user.setFullname(fullname);
 		userDAO.insertUser(user);
 		return true;
 	}

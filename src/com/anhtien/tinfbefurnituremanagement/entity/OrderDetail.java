@@ -2,23 +2,24 @@ package com.anhtien.tinfbefurnituremanagement.entity;
 
 public class OrderDetail {
 	private int id;
-	private String orderID;
-	private int productID;
+	private Order order;
+	private Product product;
 	private int quantity;
 	private Double price;
+	private String status;
 
 	public OrderDetail() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
-	public OrderDetail(int id, String orderID, int productID, int quantity, Double price) {
+	}
+	
+	public OrderDetail(int id, Order order, Product product, int quantity, Double price, String status) {
 		super();
 		this.id = id;
-		this.orderID = orderID;
-		this.productID = productID;
+		this.order = order;
+		this.product = product;
 		this.quantity = quantity;
 		this.price = price;
+		this.status = status;
 	}
 
 	public int getId() {
@@ -29,20 +30,20 @@ public class OrderDetail {
 		this.id = id;
 	}
 
-	public String getOrderID() {
-		return orderID;
+	public Order getOrder() {
+		return order;
 	}
 
-	public void setOrderID(String orderID) {
-		this.orderID = orderID;
+	public void setOrder(Order order) {
+		this.order = order;
 	}
 
-	public int getProductID() {
-		return productID;
+	public Product getProduct() {
+		return product;
 	}
 
-	public void setProductID(int productID) {
-		this.productID = productID;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 
 	public int getQuantity() {
@@ -59,6 +60,14 @@ public class OrderDetail {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }

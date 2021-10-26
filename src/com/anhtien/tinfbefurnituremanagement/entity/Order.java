@@ -9,13 +9,20 @@ public class Order {
 	private String phone;
 	private int total;
 	private Timestamp orderDate;
+	private String payment;
+	private User user;
 
 	public Order() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Order(String id, String username, String address, String phone, int total, Timestamp orderDate) {
+	public Order(String id) {
+		this.id = id;
+	}
+
+	public Order(String id, String username, String address, String phone, int total, Timestamp orderDate,
+			String payment, User user) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -23,6 +30,8 @@ public class Order {
 		this.phone = phone;
 		this.total = total;
 		this.orderDate = orderDate;
+		this.payment = payment;
+		this.user = user;
 	}
 
 	public String getId() {
@@ -71,6 +80,22 @@ public class Order {
 
 	public void setOrderDate(Timestamp orderDate) {
 		this.orderDate = orderDate;
+	}
+
+	public String getPayment() {
+		return payment;
+	}
+
+	public void setPayment(String payment) {
+		this.payment = payment;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 }

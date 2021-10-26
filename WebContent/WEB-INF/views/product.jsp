@@ -200,7 +200,7 @@
 						<label for="login-register__area" class="header__navbar-service--item header__navbar-item header__login md-display-none sm-display-none xs-display-none">
 							<a href="login"> 
 								<i class="header__navbar-service--icon ri-user-3-line" title="Login"></i> 
-								<span class="login-register"> Login/Register </span>
+								<span class="login-register"> <c:out value="${sessionScope.username }"/> </span>
 							</a>
 						</label> 
 						<label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none" for="header__search-target">

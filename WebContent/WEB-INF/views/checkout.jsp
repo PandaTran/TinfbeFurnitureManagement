@@ -62,7 +62,9 @@
 									<c:forEach var="item" items="${sessionScope.cart }">
 										<c:set var="total" value="${total + item.product.price * item.quantity }"></c:set>
 				                   		<c:set var="vat" value="${total * 0.1 }"></c:set>
-				                   		<c:set var="pay" value="${total + total * 0.1 }"></c:set>
+				                   		<c:set var="discount" value="${item.product.price * ((item.product.discount)/100) }"></c:set>
+				                   		<c:set var="setDiscount" value="${item.product.discount }"></c:set>
+				                   		<c:set var="pay" value="${total + vat - discount }"></c:set>
 										<tr class="cart_item">
 											<td class="product-name">${item.product.name } <strong
 												class="product-quantity"> × ${item.quantity }</strong>
@@ -84,13 +86,13 @@
 									<tr class="shipping">
 										<th>VAT (10%)</th>
 										<td>
-											<ul class="p-0">
-												<li class="d-flex align-items-center">
-													<label>
-														<fmt:formatNumber value="${vat }" type="currency"></fmt:formatNumber>
-													</label>
-												</li>
-											</ul>
+											<span><fmt:formatNumber value="${vat }" type="currency"></fmt:formatNumber></span>	
+										</td>
+									</tr>
+									<tr class="shipping">
+										<th>Discount (${setDiscount }%)</th>
+										<td>
+											<span><fmt:formatNumber value="${discount }" type="currency"></fmt:formatNumber></span>
 										</td>
 									</tr>
 									<tr class="order-total">
@@ -138,8 +140,8 @@
                                         <label>Payment Methods <span class="required">*</span></label>
                                         <select class="form-control" name="payment" required="required">
                                             <option selected disabled value="">Payment Method</option>
-                                            <option>Payment on delivery</option>
-                                            <option>Bank transfer</option>
+                                            <option value="Payment on delivery">Payment on delivery</option>
+                                            <option value="Bank transfer">Bank transfer</option>
                                         </select>
                                     </div>
                                 </div>

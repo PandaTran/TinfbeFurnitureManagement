@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("role", user.getRole());
 			response.sendRedirect(request.getContextPath() + "/home");
 		} else {
-			request.setAttribute("errorMessage", "Login failed");
+			request.setAttribute("errorMessage", "Username or password incorrect.");
 			RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/login.jsp");
 			dispatcher.forward(request, response);
 		}

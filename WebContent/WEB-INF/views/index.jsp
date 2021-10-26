@@ -199,7 +199,7 @@
 						<label for="login-register__area" class="header__navbar-service--item header__navbar-item header__login md-display-none sm-display-none xs-display-none">
 							<a href="login"> 
 								<i class="header__navbar-service--icon ri-user-3-line" title="Login"></i> 
-								<span class="login-register"> Login/Register </span>
+								<span> <c:out value="${sessionScope.username }"/> </span>
 							</a>
 						</label> 
 						<label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none" for="header__search-target">
@@ -271,7 +271,7 @@
             <div class="text text-right sm-display-none xs-display-none">
                 <h6>Accessories Decor <span>2021</span></h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Tenetur minima velit aut impedit enim saepe voluptatum fuga rerum beatae molestias magnam, laboriosam id!</p>
-                <a href="product" class="btn">Order Now</a>
+                <a href="login" class="btn">Login Now</a>
             </div>
             <div class="footer">
                 <div class="prevNext">

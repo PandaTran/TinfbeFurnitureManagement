@@ -28,28 +28,23 @@ public class RegisterServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
-		String email = request.getParameter("email");
-		String address = request.getParameter("address");
-		String phone = request.getParameter("phone");
-		
+		String fullname = request.getParameter("fullname");
 		UserService service = new UserService();
 		boolean result = true;
 		try {
-			result = service.insertUser(username, password, firstName, lastName, email, address, phone);
+			result = service.insertUser(username, password, fullname);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 		if(result) {
 			request.setAttribute("infoMessage", "Register successfully");
-			RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/index.jsp");
+			RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/login.jsp");
 			dispatcher.forward(request, response);
 		} else {
-			request.setAttribute("errorMessage", "Register Failed!!!");
+			request.setAttribute("errorMessage", "Register Failed!!! Email was registered");
 			RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/login.jsp");
 			dispatcher.forward(request, response);
 		}
