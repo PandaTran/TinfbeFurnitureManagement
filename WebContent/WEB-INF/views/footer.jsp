@@ -23,7 +23,7 @@
 </head>
 <body class="light-theme">
 	
-	<footer class="footer" id="footer">
+	<footer class="footer section__area-footer" id="footer">
         <div class="footer-area">
             <div class="footer-top">
                 <div class="row justify-content-center align-items-center">
@@ -32,24 +32,24 @@
                             <div class="footer-logo">
                                 <a href="home" class="d-block">
                                     <img src="./assets/images/shortcut-icon.png" alt="">
-                                    <span>tinfbe</span>
+                                    <span>Tinfbe<small class="logo__format">Fur</small></span>
                                 </a>
                             </div>
                             <p>Homess is a premium theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
-                            <ul class="social-link d-flex justify-content-center align-items-center my-4">
-                                <li>
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="ri-google-fill"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="ri-linkedin-fill"></i></a>
-                                </li>
-                            </ul>
+                            <div class="footer-social">
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-facebook-fill footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-instagram-line footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-messenger-line footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-youtube-fill footer__social-icon"></i></a>
+                                </span>
+                            </div>
                             <ul class="footer-menu text-center d-inline-flex">
                                 <li>
                                     <a href="blog">Blog</a>

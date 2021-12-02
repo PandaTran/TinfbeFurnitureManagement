@@ -1,30 +1,3 @@
-/*---XX-Large devices---*/
-
-@media (min-width: 1400px) {
-    .xxl-display-none {
-        display: none;
-    }
-}
-
-
-/*---X-Large devices---*/
-
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-    .xl-display-none {
-        display: none;
-    }
-}
-
-
-/*---Large devices---*/
-
-@media (min-width: 992px) and (max-width: 119.98px) {
-    .lg-display-none {
-        display: none;
-    }
-}
-
-
 /**/
 
 @media only screen and (max-width: 1199.98px) {

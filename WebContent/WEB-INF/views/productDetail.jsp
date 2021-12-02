@@ -48,8 +48,8 @@
 	<div class="slider-area over-hidden">	
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">
-					<div class="page-title">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+					<div class="page-title section__area">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb bg-transparent">
 								<li class="breadcrumb-item"><a href="home">Home</a></li>
@@ -64,7 +64,7 @@
 		</div>
 	</div>
 	
-	<div class="product__detail">
+	<div class="product__detail section__area">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xl-6 col-ld-6 col-md-6 col-sm-12 col-12">
@@ -191,7 +191,7 @@
 	<%
 		}
 	%>
-	<div class="container-fluid">
+	<div class="container-fluid section__area">
 		<div class="product__description-review">
 			<nav class="d-flex justify-content-center">
 				<div class="nav review-tabs product-view-tab" id="nav-tab"
@@ -291,123 +291,117 @@
 		</div>
 	</div>
 
-	<section class="features ">
-		<div class="container-fluid ">
-			<div class="row ">
+	<section class="features section__area">
+		<div class="container-fluid">
+			<div class="row">
 				<div
 					class="col-xl-6 col-lg-6 col-md-10 col-sm-12 col-12 offset-xl-3 offset-lg-3 offset-md-1">
-					<div class="section-title text-center ">
-						<h2 class="pb-20 ">#Related products</h2>
+					<div class="section-title text-center">
+						<h2 class="pb-20">#Related products</h2>
 						<p>Nam liber tempor cum soluta nobis eleifend option congue
 							nihil. Doming id quod mazim placerat facer possim assum. Typi non
 							habent claritatem insitam.</p>
 					</div>
 				</div>
 			</div>
-			<div class="row px-2 mt-20 mb-50 ">
-				<div class="col-lg-3 col-md-3 col-sm-6 col-6 ">
-					<div class="feature__item product__item ">
+			<div class="row px-2 mt-20 mb-50">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-6">
+					<div class="feature__item product__item">
 						<div
-							class="feature__item-img product__img position-relative overflow-hidden ">
+							class="feature__item-img product__img position-relative overflow-hidden">
 							<div
-								class="feature__item-label-sale product__label position-absolute ">
+								class="feature__item-label-sale product__label position-absolute">
 								<span class="text-white d-block mb-1 ">Sale</span>
 							</div>
-							<a href="# " class="position-relative d-block "> <img
-								src="assets/images/product__lighting2.png " alt=" " class=" ">
-								<img src="assets/images/product__lighting2-hover.png " alt=" "
-								class="hover-img position-absolute ">
+							<a href="#" class="position-relative d-block"> 
+								<img src="assets/images/product__lighting2.png">
+								<img src="assets/images/product__lighting2-hover.png" class="hover-img position-absolute">
 							</a>
 						</div>
-						<div class="feature__item-info product__info position-relative ">
-							<div class="feature__item-tag product__tag ">
-								<a href="# ">bowls,</a> <a href="# ">Dining</a>
+						<div class="feature__item-info product__info position-relative">
+							<div class="feature__item-tag product__tag">
+								<a href="#">bowls,</a> <a href="#">Dining</a>
 							</div>
-							<p class="feature__item-name product__name ">Designs Woolrich
-								Klettersack</p>
+							<p class="feature__item-name product__name">Designs Woolrich Klettersack</p>
 							<div
-								class="feature__item-action product__action position-relative ">
-								<div class="feature__item-price product__price ">
+								class="feature__item-action product__action position-relative">
+								<div class="feature__item-price product__price">
 									<span
-										class="feature__item-price--current product__price-current ">$34.32</span>
-									<span class="feature__item-price--old product__price-old ">$345.56</span>
+										class="feature__item-price--current product__price-current">$34.32</span>
+									<span class="feature__item-price--old product__price-old">$345.56</span>
 								</div>
-								<div class="add-to-cart ">
-									<a href="# " class="text-dark "> <span
-										class="add-to-cart--icon "><i
-											class="ri-shopping-bag-3-line "></i></span> <span
-										class="add-to-cart-title ">Add To Cart</span>
+								<div class="add-to-cart">
+									<a href="#" class="text-dark"> <span
+										class="add-to-cart--icon"><i
+											class="ri-shopping-bag-3-line"></i></span> <span
+										class="add-to-cart-title">Add To Cart</span>
 									</a>
 								</div>
 							</div>
 							<div
-								class="feature__item-wishlist product__wishlist position-absolute ">
-								<span
-									class="feature__item-like feature__item-like--liked product__like ">
-									<a href=" "> <i
-										class="ri-heart-line product__see-more product__icon "></i>
-								</a> <a href="# "> <i
-										class="ri-search-eye-line product__see-more product__icon "></i>
-								</a> <a href=" " title="Add to Wishlist " class="d-none "> <i
-										class="ri-heart-fill feature__item-like--icon-pill product__like--icon-pill product__icon "></i>
-								</a>
+								class="feature__item-wishlist product__wishlist position-absolute">
+								<span class="feature__item-like feature__item-like--liked product__like">
+									<a href="#"> 
+										<i class="ri-heart-fill product__see-more product__icon"></i>
+									</a> 
+									<a href="# "> 
+										<i class="ri-search-eye-line product__see-more product__icon"></i>
+									</a>
 								</span>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-6 ">
-					<div class="feature__item product__item ">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-6">
+					<div class="feature__item product__item">
 						<div
-							class="feature__item-img product__img position-relative overflow-hidden ">
+							class="feature__item-img product__img position-relative overflow-hidden">
 							<div
-								class="feature__item-label-seller product__label position-absolute ">
-								<span class="text-white d-block mb-1 ">Seller</span>
+								class="feature__item-label-seller product__label position-absolute">
+								<span class="text-white d-block mb-1">Seller</span>
 							</div>
-							<a href="# " class="position-relative d-block "> <img
-								src="assets/images/product__chair1.png " alt=" " class=" ">
-								<img src="assets/images/product__chair1-hover.png " alt=" "
-								class="hover-img position-absolute ">
+							<a href="#" class="position-relative d-block"> 
+								<img src="assets/images/product__chair1.png">
+								<img src="assets/images/product__chair1-hover.png" class="hover-img position-absolute">
 							</a>
 						</div>
-						<div class="feature__item-info product__info position-relative ">
-							<div class="feature__item-tag product__tag ">
-								<a href="# ">bowls,</a> <a href="# ">Dining</a>
+						<div class="feature__item-info product__info position-relative">
+							<div class="feature__item-tag product__tag">
+								<a href="#">bowls,</a> <a href="#">Dining</a>
 							</div>
-							<p class="feature__item-name product__name ">Designs Woolrich
+							<p class="feature__item-name product__name">Designs Woolrich
 								Klettersack</p>
 							<div
-								class="feature__item-action product__action position-relative ">
-								<div class="feature__item-price product__price ">
+								class="feature__item-action product__action position-relative">
+								<div class="feature__item-price product__price">
 									<span
-										class="feature__item-price--current product__price-current ">$34.32</span>
-									<span class="feature__item-price--old product__price-old ">$345.56</span>
+										class="feature__item-price--current product__price-current">$34.32</span>
+									<span class="feature__item-price--old product__price-old">$345.56</span>
 								</div>
-								<div class="add-to-cart ">
-									<a href="# " class="text-dark "> <span
-										class="add-to-cart--icon "><i
-											class="ri-shopping-bag-3-line "></i></span> <span
-										class="add-to-cart-title ">Add To Cart</span>
+								<div class="add-to-cart">
+									<a href="#" class="text-dark"> <span
+										class="add-to-cart--icon"><i
+											class="ri-shopping-bag-3-line"></i></span> <span
+										class="add-to-cart-title">Add To Cart</span>
 									</a>
 								</div>
 							</div>
 							<div
-								class="feature__item-wishlist product__wishlist position-absolute ">
+								class="feature__item-wishlist product__wishlist position-absolute">
 								<span
-									class="feature__item-like feature__item-like--liked product__like ">
-									<a href=" "> <i
-										class="ri-heart-line product__see-more product__icon "></i>
-								</a> <a href="# "> <i
-										class="ri-search-eye-line product__see-more product__icon "></i>
-								</a> <a href=" " title="Add to Wishlist " class="d-none "> <i
-										class="ri-heart-fill feature__item-like--icon-pill product__like--icon-pill product__icon "></i>
-								</a>
+									class="feature__item-like feature__item-like--liked product__like">
+									<a href="#"> 
+										<i class="ri-heart-fill product__see-more product__icon"></i>
+									</a> 
+									<a href="#"> 
+										<i class="ri-search-eye-line product__see-more product__icon"></i>
+									</a>
 								</span>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-6 ">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-6">
 					<div class="feature__item product__item ">
 						<div
 							class="feature__item-img product__img position-relative overflow-hidden ">
@@ -447,11 +441,9 @@
 								<span
 									class="feature__item-like feature__item-like--liked product__like ">
 									<a href=" "> <i
-										class="ri-heart-line product__see-more product__icon "></i>
+										class="ri-heart-fill product__see-more product__icon "></i>
 								</a> <a href="# "> <i
 										class="ri-search-eye-line product__see-more product__icon "></i>
-								</a> <a href=" " title="Add to Wishlist " class="d-none "> <i
-										class="ri-heart-fill feature__item-like--icon-pill product__like--icon-pill product__icon "></i>
 								</a>
 								</span>
 							</div>
@@ -498,11 +490,9 @@
 								<span
 									class="feature__item-like feature__item-like--liked product__like">
 									<a href=""> <i
-										class="ri-heart-line product__see-more product__icon"></i>
+										class="ri-heart-fill product__see-more product__icon"></i>
 								</a> <a href="#"> <i
 										class="ri-search-eye-line product__see-more product__icon"></i>
-								</a> <a href="" title="Add to Wishlist" class="d-none"> <i
-										class="ri-heart-fill feature__item-like--icon-pill product__like--icon-pill product__icon"></i>
 								</a>
 								</span>
 							</div>
@@ -513,11 +503,10 @@
 		</div>
 	</section>
 
-	<div class="subscribe-area">
+	<div class="subscribe-area section__area">
 		<div class="container">
 			<div class="row">
-				<div
-					class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1">
+				<div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1">
 					<div class="section-title subscribe-title text-center">
 						<h2>Sign Up For Our Newsletter</h2>
 						<p>Subscribe to the Homess mailing list to receive updates on
@@ -526,16 +515,11 @@
 				</div>
 			</div>
 			<div class="row">
-				<div
-					class="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 offset-xl-1">
+				<div class="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 offset-xl-1">
 					<div class="subscribe-form text-center">
 						<form action="#">
-							<input type="text"
-								class="sub-name form-control text-center bg-transparent mt-4"
-								name="name" id="name"
-								placeholder="Subscribe to our newsletter..."> <a
-								href="#" class="sub-btn d-inline-block border-0"
-								style="margin-top: 50px;">Subscribe</a>
+							<input type="text" class="sub-name form-control text-center bg-transparent mt-4" name="name" id="name" placeholder="Subscribe to our newsletter..."> 
+								<a href="#" class="sub-btn d-inline-block border-0" style="margin-top: 50px;">Subscribe</a>
 						</form>
 					</div>
 				</div>

@@ -34,13 +34,13 @@
 	<header id="header" class="header">
 		<div class="container-fluid">
 			<div class="row align-items-center justify-content-lg-between position-relative">
-				<div class="col-xl-5 col-lg-5 col-md-4 col-sm-3 col-3 p-0 position-static">
-					<label for="mobile-menu__area" class="mobile-menu__nav d-lg-none">
+				<div class="col-xl-5 col-lg-4 col-md-3 col-sm-2 col-2 p-0 position-static">
+					<label for="mobile-menu__area" class="mobile-menu__nav d-block d-xl-none">
 						<i class="ri-menu-2-line mobile-menu__icon"></i>
 					</label> 
 					<input type="checkbox" class="mobile-menu__input" id="mobile-menu__area" hidden> 
 					<label for="mobile-menu__area" class="overlay"></label>
-					<div class="mobile-menu wrapper">
+					<div class="mobile-menu wrapper d-block d-xl-none">
 						<label class="mobile-menu__close" for="mobile-menu__area">
 							<i class="ri-close-line" style="font-size: 20px;"></i>
 						</label>
@@ -123,7 +123,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="main-menu md-display-none sm-display-none xs-display-none" id="mainMenu">
+					<div class="main-menu d-none d-xl-block" id="mainMenu">
 						<nav class="header__navbar">
 							<ul class="header__navbar-list main-menu--list">
 								<li class="header__navbar-item main-menu--item">
@@ -180,15 +180,15 @@
 						</nav>
 					</div>
 				</div>
-				<div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6 d-flex align-items-center justify-content-center">
+				<div class="col-xl-2 col-lg-3 col-md-6 col-sm-8 col-8 d-flex align-items-center justify-content-center">
 					<div class="logo d-flex">
 						<a href="home" title="Tinfbe.com | Furniture Store"> 
 							<img src="./assets/images/shortcut-icon.png" alt="Tinfbe.com | Furniture Store"> 
-							<span>tinfbe</span>
+							<span>Tinfbe<small class="logo__format">Fur</small></span>
 						</a>
 					</div>
 				</div>
-				<div class="col-xl-5 col-lg-5 col-md-4 col-sm-3 col-3 px-0 text-right">
+				<div class="col-xl-5 col-lg-5 col-md-3 col-sm-2 col-2 px-0 text-right">
 					<div class="header__navbar-list header__navbar-service">
 						<label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none" for="header__search-target">
                             <i class="header__navbar-service--icon ri-search-line" title="Search"></i>
@@ -270,7 +270,7 @@
         </div>
     </div>
     
-    <div class="about-us-des-area">
+    <div class="about-us-des-area section__area">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mt-4">
@@ -289,7 +289,7 @@
         </div>
     </div>
     
-    <div class="about-us-banner-area">
+    <div class="about-us-banner-area section__area-bottom">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -321,8 +321,8 @@
         </div>
     </div>
     
-    <div class="about-us-video-area mb-50">
-        <div class="container-fluid">
+    <div class="about-us-video-area mt-5">
+        <div class="container-fluid p-0">
             <div class="about-us-video about-video-bg d-flex align-items-center justify-content-center" data-background="./assets/images/about-us-banner.png" style="background-image: url(&quot;./assets/images/about-us-banner.png&quot;);">
                 <a data-fancybox="" href="#">
                     <div class="video-play-wrap position-relative">
@@ -339,7 +339,7 @@
         </div>
     </div>
     
-    <section class="service">
+    <section class="service section__area">
         <div class="container-fluid">
             <div class="service__list">
                 <div class="row">
@@ -381,7 +381,7 @@
         </div>
     </section>
     
-	<div class="subscribe-area">
+	<div class="subscribe-area section__area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1">

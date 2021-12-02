@@ -42,7 +42,7 @@
 	
 	        </div>
 	    </div>
-	    <div class="cart-area" id="cart" tabindex="-1" role="dialog" aria-hidden="true">
+	    <div class="cart-area section__area" id="cart" tabindex="-1" role="dialog" aria-hidden="true">
 	        <div class="container">
 	            <div class="cart-table text-center">
 	                <table class="table table-bordered">
@@ -148,23 +148,7 @@
     </c:if>
     
 	<c:if test="${sessionScope.cart == null && sessionScope.username != null }">
-		<div class="slider-area">
-			<div class="page-title">
-				<div class="text text-center">
-					<h2>Cart</h2>
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb justify-content-center bg-transparent">
-							<li class="breadcrumb-item"><a href="home">Home</a></li>
-							<li class="breadcrumb-item active text-capitalize"
-								aria-current="page">Cart</li>
-						</ol>
-					</nav>
-				</div>
-
-			</div>
-		</div>
-		
-		<div class="cart-area" id="cart">
+		<div class="cart-area" id="cart" style="padding: 150px 0;">
 			<div class="container text-center">
 	            <img class="" src="./assets/images/empty.png" width="30%">
 	        </div>
@@ -175,7 +159,7 @@
 	</c:if>
 
 	<c:if test="${sessionScope.username == null }">
-		<div class="slider-area">
+		<div style="padding: 150px 0;">
 			<div class="container text-center mt-5">
 				<img class="" src="./assets/images/no-product.png" width="30%">
 			</div>

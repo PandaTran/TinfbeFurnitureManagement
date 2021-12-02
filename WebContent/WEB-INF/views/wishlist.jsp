@@ -43,7 +43,7 @@
 	        </div>
 	    </div>
 	    
-	    <div class="wishlist-area d-md-block" id="wishlist" tabindex="-1" role="dialog" aria-hidden="true">
+	    <div class="wishlist-area d-md-block section__area" id="wishlist" tabindex="-1" role="dialog" aria-hidden="true">
 	        <div class="container-fluid">
 	            <div class="row">
 	                <div class="col-xl-12 col-lg-12 md-display-none sm-display-none xs-display-none">
@@ -134,30 +134,14 @@
 	    </div>
     </c:if>
     <c:if test="${sessionScope.wishlist == null && sessionScope.username != null}">
-		<div class="slider-area">
-	        <div class="page-title">
-	            <div class="text text-center">
-	                <h2>Wishlist</h2>
-	                <nav aria-label="breadcrumb">
-	                    <ol class="breadcrumb justify-content-center bg-transparent">
-	                        <li class="breadcrumb-item"><a href="home">Home</a>
-	                        </li>
-	                        <li class="breadcrumb-item active text-capitalize" aria-current="page">Wishlist</li>
-	                    </ol>
-	                </nav>
-	            </div>
-	
-	        </div>
-	    </div>
-	    
-	    <div class="cart-area" id="cart">
+	    <div class="cart-area" id="cart" style="padding: 150px 0;">
 			<div class="container text-center">
 	            <img class="" src="./assets/images/empty.png" width="30%">
 	        </div>
 		</div>
     </c:if>
     <c:if test="${sessionScope.username == null }">
-		<div class="slider-area">
+		<div style="padding: 150px 0;">
 			<div class="container text-center mt-5">
 				<img class="" src="./assets/images/no-product.png" width="30%">
 			</div>

@@ -85,7 +85,76 @@
             </div>
         </div>
     </div>
-	<jsp:include page="footer.jsp"></jsp:include>
+	
+	<footer class="footer" id="footer">
+        <div class="footer-area">
+            <div class="footer-top">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="footer-top-content text-center">
+                            <div class="footer-logo">
+                                <a href="home" class="d-block">
+                                    <img src="./assets/images/shortcut-icon.png" alt="">
+                                    <span>Tinfbe<small class="logo__format">Fur</small></span>
+                                </a>
+                            </div>
+                            <p>Homess is a premium theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
+                            <div class="footer-social">
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-facebook-fill footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-instagram-line footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-messenger-line footer__social-icon"></i></a>
+                                </span>
+                                <span class="footer__social-item">
+                                    <a href=""><i class="ri-youtube-fill footer__social-icon"></i></a>
+                                </span>
+                            </div>
+                            <ul class="footer-menu text-center d-inline-flex">
+                                <li>
+                                    <a href="blog">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="aboutUs">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="contactUs">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">F.A.Q.'s</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container-wrapper">
+                    <div class="copyright-area">
+                        <div class="align-items-center justify-content-center">
+                            <div class="col-xl-12 col-lg-12 col-d-12 col-sm-12 col-12">
+                                <div class="copyright-text d-sm-flex justify-content-center align-items-center text-center">
+                                    <p class="pr-1">
+                                        Copyright @
+                                        <a href="home" class="copyright-link">Homes</a> All Rights Reserved.
+                                    </p>
+                                    <p>Powered by
+                                        <a href="home" class="copyright-link">Tinfbe Furniture.</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 	
 	<!--Scroll Up-->
     <a href="#" class="scrollup" id="scroll-up">

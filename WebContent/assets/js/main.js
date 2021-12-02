@@ -18,13 +18,13 @@ function scrollHeader() {
 window.addEventListener("scroll", scrollHeader);
 
 /* DARK MODE TOGGLE */
-var darkIcon = document.getElementById("dark-mode__icon");
-darkIcon.onclick = function() {
-    document.body.classList.toggle("dark-theme");
-    if (document.body.classList.contains("dark-theme")) {
-        darkIcon.src = "./assets/images/sun.png";
-    } else { darkIcon.src = "./assets/images/moon.png" }
-}
+//var darkIcon = document.getElementById("dark-mode__icon");
+//darkIcon.onclick = function() {
+//    document.body.classList.toggle("dark-theme");
+//    if (document.body.classList.contains("dark-theme")) {
+//        darkIcon.src = "./assets/images/sun.png";
+//    } else { darkIcon.src = "./assets/images/moon.png" }
+//}
 
 /*---Accordion---*/
 $(".accordian").on("click", ".accordian-title", function() {

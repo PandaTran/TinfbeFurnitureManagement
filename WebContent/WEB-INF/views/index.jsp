@@ -40,13 +40,13 @@
 	<header id="header" class="header">
 		<div class="container-fluid">
 			<div class="row align-items-center justify-content-lg-between position-relative">
-				<div class="col-xl-5 col-lg-5 col-md-4 col-sm-3 col-3 p-0 position-static">
-					<label for="mobile-menu__area" class="mobile-menu__nav d-lg-none">
+				<div class="col-xl-5 col-lg-4 col-md-3 col-sm-2 col-2 p-0 position-static">
+					<label for="mobile-menu__area" class="mobile-menu__nav d-block d-xl-none">
 						<i class="ri-menu-2-line mobile-menu__icon"></i>
 					</label> 
 					<input type="checkbox" class="mobile-menu__input" id="mobile-menu__area" hidden> 
 					<label for="mobile-menu__area" class="overlay"></label>
-					<div class="mobile-menu wrapper">
+					<div class="mobile-menu wrapper d-block d-xl-none">
 						<label class="mobile-menu__close" for="mobile-menu__area">
 							<i class="ri-close-line" style="font-size: 20px;"></i>
 						</label>
@@ -129,7 +129,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="main-menu md-display-none sm-display-none xs-display-none" id="mainMenu">
+					<div class="main-menu d-none d-xl-block" id="mainMenu">
 						<nav class="header__navbar">
 							<ul class="header__navbar-list main-menu--list">
 								<li class="header__navbar-item main-menu--item">
@@ -186,15 +186,15 @@
 						</nav>
 					</div>
 				</div>
-				<div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6 d-flex align-items-center justify-content-center">
+				<div class="col-xl-2 col-lg-3 col-md-6 col-sm-8 col-8 d-flex align-items-center justify-content-center">
 					<div class="logo d-flex">
 						<a href="home" title="Tinfbe.com | Furniture Store"> 
 							<img src="./assets/images/shortcut-icon.png" alt="Tinfbe.com | Furniture Store"> 
-							<span>tinfbe</span>
+							<span>Tinfbe<small class="logo__format">Fur</small></span>
 						</a>
 					</div>
 				</div>
-				<div class="col-xl-5 col-lg-5 col-md-4 col-sm-3 col-3 px-0 text-right">
+				<div class="col-xl-5 col-lg-5 col-md-3 col-sm-2 col-2 px-0 text-right">
 					<div class="header__navbar-list header__navbar-service"> 
 						<label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none" for="header__search-target">
                             <i class="header__navbar-service--icon ri-search-line" title="Search"></i>
@@ -260,35 +260,27 @@
 		</div>
 	</header>
 	
-	<div class="home-carousel">
-        <div id="home__carousel" class="carousel slide content" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/images/home__carousel(1).png">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/home__carousel(2).png">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/home__carousel(3).png">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/home__carousel(4).png">
-                </div>
+	<div class="home-area">
+        <div class="home__container container">
+            <div class="background-overlay"></div>
+            <div class="shape shape-bottom" data-negative="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path opacity="0.33"
+                        d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
+                    </path>
+                    <path opacity="0.66"
+                        d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z">
+                    </path>
+                    <path
+                        d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z">
+                    </path>
+                </svg>
             </div>
-            <div class="text text-right sm-display-none xs-display-none">
-                <h6>Accessories Decor <span>2021</span></h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Tenetur minima velit aut impedit enim saepe voluptatum fuga rerum beatae molestias magnam, laboriosam id!</p>
-                <a href="login" class="btn">Login Now</a>
-            </div>
-            <div class="footer">
-                <div class="prevNext">
-                    <a class="left carousel-control" href="#home__carousel" data-slide="prev">
-                        <span class="sr-only"><i class="ri-arrow-left-s-line"></i></span>
-                    </a>
-                    <a class="right carousel-control" href="#home__carousel" data-slide="next">
-                        <span class="sr-only"><i class="ri-arrow-right-s-line"></i></span>
-                    </a>
+            <div class="row align-items-center">
+                <div class="home__data col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1 text-center">
+                    <h3>welcome to tinfbe furniture</h3>
+                    <h1>Welcome To Furniture Store</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem commodi, illum neque asperiores earum assumenda natus vitae sed porro officia esse molestias a sunt itaque necessitatibus, corporis odit est id!</p>
                 </div>
             </div>
         </div>
@@ -336,7 +328,7 @@
         </div>
     </section>
     
-    <div class="product-banner-area">
+    <div class="product-banner-area section__area">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-5 col-lg-5 md-display-none sm-display-none xs-display-none">
@@ -349,7 +341,7 @@
                 <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
                     <div class="product-banner--list-product">
                         <div class="m-2">
-                            <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="section-title text-center">
                                     <h2>New Arrivals </h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas fugiat deleniti quisquam ex atque! Architecto molestiae facilis odit, voluptate, at minus adipisci voluptatibus quia officiis veritatis, doloribus quod
@@ -357,7 +349,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1 text-center mb-4">
+                        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1 text-center mb-5">
                             <a class="more__btn" href="product">
                                 <svg>
                                     <rect x="0" y="0" fill="none" width="130" height="50"/>
@@ -399,10 +391,7 @@
                                         <div class="product__wishlist position-absolute">
                                             <span class="product__like">
                                                 <a href="wishlist?action=add&id=<%=product.getId() %>" title="Add to Wishlist">
-                                                    <i class="ri-heart-line product__like--icon-empty product__icon"></i>
-                                                </a>
-                                                <a href="#" title="Add to Wishlist" class="d-none">
-                                                    <i class="ri-heart-fill product__like--icon-pill product__icon"></i>
+                                                    <i class="ri-heart-fill product__like--icon-empty product__icon"></i>
                                                 </a>
                                             </span>
                                         </div>
@@ -439,13 +428,13 @@
         </div>
     </div>
     
-    <div class="product-banner-area">
+    <div class="product-banner-area section__area">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
                     <div class=" product-banner--list-product">
                         <div class="m-2">
-                            <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="section-title text-center">
                                     <h2>Best Sellers Product </h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas fugiat deleniti quisquam ex atque! Architecto molestiae facilis odit, voluptate, at minus adipisci voluptatibus quia officiis veritatis, doloribus quod
@@ -453,7 +442,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1 text-center mb-4">
+                        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1 text-center mb-5">
                             <a class="more__btn" href="product">
                                 <svg>
                                     <rect x="0" y="0" fill="none" width="130" height="50"/>
@@ -495,10 +484,7 @@
                                         <div class="product__wishlist position-absolute">
                                             <span class="product__like">
                                                 <a href="wishlist?action=add&id=<%=product.getId() %>" title="Add to Wishlist">
-                                                    <i class="ri-heart-line product__like--icon-empty product__icon"></i>
-                                                </a>
-                                                <a href="#" title="Add to Wishlist" class="d-none">
-                                                    <i class="ri-heart-fill product__like--icon-pill product__icon"></i>
+                                                    <i class="ri-heart-fill product__like--icon-empty product__icon"></i>
                                                 </a>
                                             </span>
                                         </div>
@@ -514,7 +500,7 @@
                 <div class="col-xl-5 col-lg-5 md-display-none sm-display-none xs-display-none">
                     <div class="product-banner-img--right" style="visibility: visible;">
                         <a href="product" class="d-block">
-                            <img src="./assets/images/banner-bestseller..png" alt="" class="width100 height100">
+                            <img src="./assets/images/banner-bestseller.png" alt="" class="width100 height100">
                         </a>
                     </div>
                 </div>
@@ -545,7 +531,7 @@
         </div>
     </div>
     
-    <div class="blog-area">
+    <div class="blog-area section__area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-10 col-sm-12 col-12 offset-xl-3 offset-lg-3 offset-md-1">

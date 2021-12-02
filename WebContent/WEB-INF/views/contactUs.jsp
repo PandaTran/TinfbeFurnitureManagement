@@ -34,13 +34,13 @@
 	<header id="header" class="header">
 		<div class="container-fluid">
 			<div class="row align-items-center justify-content-lg-between position-relative">
-				<div class="col-xl-5 col-lg-5 col-md-4 col-sm-3 col-3 p-0 position-static">
-					<label for="mobile-menu__area" class="mobile-menu__nav d-lg-none">
+				<div class="col-xl-5 col-lg-4 col-md-3 col-sm-2 col-2 p-0 position-static">
+					<label for="mobile-menu__area" class="mobile-menu__nav d-block d-xl-none">
 						<i class="ri-menu-2-line mobile-menu__icon"></i>
 					</label> 
 					<input type="checkbox" class="mobile-menu__input" id="mobile-menu__area" hidden> 
 					<label for="mobile-menu__area" class="overlay"></label>
-					<div class="mobile-menu wrapper">
+					<div class="mobile-menu wrapper d-block d-xl-none">
 						<label class="mobile-menu__close" for="mobile-menu__area">
 							<i class="ri-close-line" style="font-size: 20px;"></i>
 						</label>
@@ -180,15 +180,15 @@
 						</nav>
 					</div>
 				</div>
-				<div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6 d-flex align-items-center justify-content-center">
+				<div class="col-xl-2 col-lg-3 col-md-6 col-sm-8 col-8 d-flex align-items-center justify-content-center">
 					<div class="logo d-flex">
 						<a href="home" title="Tinfbe.com | Furniture Store"> 
 							<img src="./assets/images/shortcut-icon.png" alt="Tinfbe.com | Furniture Store"> 
-							<span>tinfbe</span>
+							<span>Tinfbe<small class="logo__format">Fur</small></span>
 						</a>
 					</div>
 				</div>
-				<div class="col-xl-5 col-lg-5 col-md-4 col-sm-3 col-3 px-0 text-right">
+				<div class="col-xl-5 col-lg-5 col-md-3 col-sm-2 col-2 px-0 text-right">
 					<div class="header__navbar-list header__navbar-service">
 						<label class="header__navbar-service--item header__navbar-item header__search md-display-none sm-display-none xs-display-none" for="header__search-target">
                             <i class="header__navbar-service--icon ri-search-line" title="Search"></i>
@@ -272,7 +272,7 @@
         </div>
     </div>
     
-    <div class="map-area">
+    <div class="map-area section__area">
         <div class="container-fluid">
             <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.3852994171757!2d108.23912354970538!3d16.045483544283037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421763da018dc7%3A0xbe331ab1acad1d43!2zMTAwIFTDtG4gVGjhuqV0IFRoaeG7h3AsIELhuq9jIE3hu7kgQW4sIE5nxakgSMOgbmggU8ahbiwgxJDDoCBO4bq1bmcgNTUwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1630205417997!5m2!1svi!2s"
@@ -281,7 +281,7 @@
         </div>
     </div>
     
-    <div class="contact-area">
+    <div class="contact-area section__area-bottom">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -347,7 +347,7 @@
         </div>
     </div>
     
-    <div class="subscribe-area">
+    <div class="subscribe-area section__area-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 offset-xl-2 offset-lg-1">
