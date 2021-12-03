@@ -426,13 +426,10 @@
                                                 <div class="feature__item-wishlist product__wishlist position-absolute">
                                                     <span class="feature__item-like feature__item-like--liked product__like">
                                                     <a href="wishlist?action=add&id=<%=product.getId() %>">
-                                                        <i class="ri-heart-line product__see-more product__icon"></i>
+                                                        <i class="ri-heart-fill product__see-more product__icon"></i>
                                                     </a>
                                                     <a href="productDetail?productID=<%=product.getId() %>">
                                                         <i class="ri-search-eye-line product__see-more product__icon"></i>
-                                                    </a>
-                                                    <a href="" title="Add to Wishlist" class="d-none">
-                                                        <i class="ri-heart-fill feature__item-like--icon-pill product__like--icon-pill product__icon"></i>
                                                     </a>
                                                 </span>
                                                 </div>
@@ -485,13 +482,10 @@
                                                 <div class="feature__item-wishlist product__wishlist position-absolute">
                                                     <span class="feature__item-like feature__item-like--liked product__like">
                                                     <a href="wishlist?action=add&id=<%=product.getId() %>">
-                                                        <i class="ri-heart-line product__see-more product__icon"></i>
+                                                        <i class="ri-heart-fill product__see-more product__icon"></i>
                                                     </a>
                                                     <a href="productDetail?productID=<%=product.getId() %>">
                                                         <i class="ri-search-eye-line product__see-more product__icon"></i>
-                                                    </a>
-                                                    <a href="#" title="Add to Wishlist" class="d-none">
-                                                        <i class="ri-heart-fill feature__item-like--icon-pill product__like--icon-pill product__icon"></i>
                                                     </a>
                                                 </span>
                                                 </div>
@@ -544,13 +538,10 @@
                                                 <div class="feature__item-wishlist product__wishlist position-absolute">
                                                     <span class="feature__item-like feature__item-like--liked product__like">
                                                     <a href="wishlist?action=add&id=<%=product.getId() %>">
-                                                        <i class="ri-heart-line product__see-more product__icon"></i>
+                                                        <i class="ri-heart-fill product__see-more product__icon"></i>
                                                     </a>
                                                     <a href="productDetail?productID=<%=product.getId() %>">
                                                         <i class="ri-search-eye-line product__see-more product__icon"></i>
-                                                    </a>
-                                                    <a href="#" title="Add to Wishlist" class="d-none">
-                                                        <i class="ri-heart-fill feature__item-like--icon-pill product__like--icon-pill product__icon"></i>
                                                     </a>
                                                 </span>
                                                 </div>
@@ -603,13 +594,10 @@
                                                 <div class="feature__item-wishlist product__wishlist position-absolute">
                                                     <span class="feature__item-like feature__item-like--liked product__like">
                                                     <a href="wishlist?action=add&id=<%=product.getId() %>">
-                                                        <i class="ri-heart-line product__see-more product__icon"></i>
+                                                        <i class="ri-heart-fill product__see-more product__icon"></i>
                                                     </a>
                                                     <a href="productDetail?productID=<%=product.getId() %>">
                                                         <i class="ri-search-eye-line product__see-more product__icon"></i>
-                                                    </a>
-                                                    <a href="#" title="Add to Wishlist" class="d-none">
-                                                        <i class="ri-heart-fill feature__item-like--icon-pill product__like--icon-pill product__icon"></i>
                                                     </a>
                                                 </span>
                                                 </div>
@@ -662,13 +650,10 @@
                                                 <div class="feature__item-wishlist product__wishlist position-absolute">
                                                     <span class="feature__item-like feature__item-like--liked product__like">
                                                     <a href="wishlist?action=add&id=<%=product.getId() %>">
-                                                        <i class="ri-heart-line product__see-more product__icon"></i>
+                                                        <i class="ri-heart-fill product__see-more product__icon"></i>
                                                     </a>
                                                     <a href="productDetail?productID=<%=product.getId() %>">
                                                         <i class="ri-search-eye-line product__see-more product__icon"></i>
-                                                    </a>
-                                                    <a href="#" title="Add to Wishlist" class="d-none">
-                                                        <i class="ri-heart-fill feature__item-like--icon-pill product__like--icon-pill product__icon"></i>
                                                     </a>
                                                 </span>
                                                 </div>
@@ -684,7 +669,7 @@
                     </div>
                     <div class="row my-4">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
-                            <a class="more-view-btn d-inline-block border-light-gray2 white-bg theme-color text-capitalize" href="">view more products</a>
+                            <a href="#" class="sub-btn d-inline-block border-0" style="margin-top: 50px;">View More Products</a>
                         </div>
                     </div>
                 </div>

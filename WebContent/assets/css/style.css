@@ -999,8 +999,6 @@ sup {
 .slider-area {
   background-image: url(../images/home__banner.jpg);
   background-size: auto;
-  min-height: 50vh;
-  height: 70vh;
   align-items: center;
   padding: 200px 0;
 }
@@ -1010,7 +1008,6 @@ sup {
   background-repeat: no-repeat;
   background-position: center center;
   z-index: 0;
-  height: 130vh;
   top: 0%;
   left: 0%;
   position: relative;
@@ -1022,7 +1019,6 @@ sup {
   color: var(--white);
   font-family: var(--satisfy-font);
   font-weight: var(--font-regular);
-  margin-bottom: 4px;
 }
 .home__container .home__data h1 {
   font-size: 56px;
@@ -1032,7 +1028,6 @@ sup {
   text-transform: capitalize;
 }
 .home__container .home__data p {
-  margin: 30px 0;
   font-size: var(--h4-font-size);
   color: var(--white);
 }
